@@ -1,0 +1,345 @@
+{
+  "banner": {
+    "1": {
+      "id": "product3",
+      "image": {
+        "0": "./assets/Rocket-single-seater 1.png",
+        "1": "./assets/Outdoor sofa set 1.png",
+        "2": "./assets/Asgaard sofa 1.png",
+        "3": "./assets/Granite dining table with dining chair 1.png",
+        "4": "./assets/Outdoor bar table and stool 1.png"
+      },
+      "name": "Rocket single seater",
+      "btn": "Shop Now",
+      "price": "2500",
+      "catagory": { "1": "sofa" },
+      "quentity": 0
+    }
+  },
+  "newArrivals": {
+    "image": {
+      "1": "./assets/Asgaard sofa 1.png"
+    },
+    "name": "Asgaard sofa",
+    "btn": "Order Now"
+  },
+  "products": {
+    "1": {
+      "id": "product1",
+      "image": {
+        "0": "./assets/Trenton modular sofa_3 1.png",
+        "1": "./assets/Outdoor sofa set 1.png",
+        "2": "./assets/Asgaard sofa 1.png",
+        "3": "./assets/Granite dining table with dining chair 1.png",
+        "4": "./assets/Outdoor bar table and stool 1.png"
+      },
+      "name": "Trenton modular sofa_3",
+      "price": "2500",
+      "catagory": { "1": "sofa" },
+      "topPick": true,
+      "quentity": 0
+    },
+    "2": {
+      "id": "product2",
+      "image": {
+        "0": "./assets/Granite dining table with dining chair 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Outdoor bar table and stool 1.png"
+      },
+      "name": "Granite dining table with dining chair",
+      "price": "203",
+      "catagory": { "1": "sofa", "2": "dining table" },
+      "topPick": true,
+      "quentity": 0
+    },
+    "3": {
+      "id": "product3",
+      "image": {
+        "0": "./assets/Rocket-single-seater 1.png",
+        "1": "./assets/Outdoor sofa set 1.png",
+        "2": "./assets/Asgaard sofa 1.png",
+        "3": "./assets/Granite dining table with dining chair 1.png",
+        "4": "./assets/Outdoor bar table and stool 1.png"
+      },
+      "name": "Rocket single seater",
+      "btn": "Shop Now",
+      "price": "2500",
+      "catagory": { "1": "sofa" },
+      "quentity": 0
+    },
+    "4": {
+      "id": "product4",
+      "image": {
+        "0": "./assets/Outdoor bar table and stool 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Outdoor bar table and stool",
+      "price": "2500",
+      "catagory": { "1": "dining table", "2": "table" },
+      "topPick": true,
+      "quentity": 0
+    },
+    "5": {
+      "id": "product5",
+      "image": {
+        "0": "./assets/Plain console with teak mirror 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Plain console with teak mirror",
+      "price": "2010",
+      "catagory": { "1": "bed" },
+      "topPick": true,
+      "quentity": 0
+    },
+    "6": {
+      "id": "product6",
+      "image": {
+        "0": "./assets/Grain coffee table 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Grain coffee table",
+      "price": "1500",
+      "catagory": { "1": "table" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "7": {
+      "id": "product7",
+      "image": {
+        "0": "./assets/Kent coffee table 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Kent coffee table",
+      "price": "2250",
+      "catagory": { "1": "table" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "8": {
+      "id": "product8",
+      "image": {
+        "0": "./assets/Round coffee table_color 2 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Round coffee table_color 2",
+      "price": "2510",
+      "catagory": { "1": "table" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "9": {
+      "id": "product9",
+      "image": {
+        "0": "./assets/Reclaimed teak coffee table 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Reclaimed teak coffee table",
+      "price": "251",
+      "catagory": { "1": "table" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "10": {
+      "id": "product10",
+      "image": {
+        "0": "./assets/Plain console_ 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Plain console",
+      "price": "2531",
+      "catagory": { "1": "table" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "11": {
+      "id": "product11",
+      "image": {
+        "0": "./assets/Reclaimed teak Sideboard 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Reclaimed teak Sideboard",
+      "price": "2430",
+      "catagory": { "1": "almirah" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "12": {
+      "id": "product12",
+      "image": {
+        "0": "./assets/SJP_0825  1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "SJP_0825",
+      "price": "2650",
+      "catagory": { "1": "dining chair" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "13": {
+      "id": "product13",
+      "image": {
+        "0": "./assets/Bella chair and table 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Bella chair and table",
+      "price": "2140",
+      "catagory": { "1": "dining chair" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "14": {
+      "id": "product14",
+      "image": {
+        "0": "./assets/square-side-table 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "square-side-table",
+      "price": "2210",
+      "catagory": { "1": "table", "2": "side table" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "15": {
+      "id": "product15",
+      "image": {
+        "0": "./assets/Asgaard sofa 1.png",
+        "1": "./assets/Outdoor sofa set 1.png",
+        "2": "./assets/Maya sofa three seater 1.png",
+        "3": "./assets/square-side-table 1.png",
+        "4": "./assets/Trenton modular sofa_3 1.png"
+      },
+      "name": "Asgaard sofa",
+      "price": "2250",
+      "catagory": { "1": "sofa" },
+      "topPick": true,
+      "quentity": 0
+    },
+    "16": {
+      "id": "product16",
+      "image": {
+        "0": "./assets/Maya sofa three seater 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Maya sofa three seater 1",
+      "price": "2670",
+      "catagory": { "1": "sofa" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "17": {
+      "id": "product17",
+      "image": {
+        "0": "./assets/Outdoor sofa set 1.png",
+        "1": "./assets/Trenton modular sofa_3 1.png",
+        "2": "./assets/Outdoor sofa set 1.png",
+        "3": "./assets/Asgaard sofa 1.png",
+        "4": "./assets/Granite dining table with dining chair 1.png"
+      },
+      "name": "Outdoor sofa set",
+      "price": "200",
+      "catagory": { "1": "sofa" },
+      "topPick": false,
+      "quentity": 0
+    },
+    "18": {
+      "id": "product18",
+      "image": {
+        "0": "./assets/Asgaard sofa 1.png",
+        "1": "./assets/Outdoor sofa set 1.png",
+        "2": "./assets/Maya sofa three seater 1.png",
+        "3": "./assets/square-side-table 1.png",
+        "4": "./assets/Trenton modular sofa_3 1.png"
+      },
+      "name": "Asgaard sofa",
+      "price": "200",
+      "catagory": { "1": "sofa" },
+      "topPick": true,
+      "quentity": 0
+    },
+    "19": {
+      "id": "product19",
+      "image": {
+        "0": "./assets/Asgaard sofa 1.png",
+        "1": "./assets/Outdoor sofa set 1.png",
+        "2": "./assets/Maya sofa three seater 1.png",
+        "3": "./assets/square-side-table 1.png",
+        "4": "./assets/Trenton modular sofa_3 1.png"
+      },
+      "name": "Asgaard sofa",
+      "price": "200",
+      "catagory": { "1": "sofa" },
+      "topPick": true,
+      "quentity": 0
+    }
+  },
+  "blogs": {
+    "1": {
+      "image": {
+        "1": "./assets/Rectangle 13.png"
+      },
+      "name": "Going all-in with millennial design",
+      "price": "25000",
+      "btn": "Read More",
+      "minute": "5 min",
+      "date": "12th Oct 2022"
+    },
+    "2": {
+      "image": {
+        "1": "./assets/Rectangle 14.png"
+      },
+      "name": "Going all-in with millennial design",
+      "price": "25000",
+      "btn": "Read More",
+      "minute": "5 min",
+      "date": "12th Oct 2022"
+    },
+    "3": {
+      "image": {
+        "1": "./assets/Rectangle 15.png"
+      },
+      "name": "Going all-in with millennial design",
+      "price": "25000",
+      "btn": "Read More",
+      "minute": "5 min",
+      "date": "12th Oct 2022"
+    }
+  }
+}

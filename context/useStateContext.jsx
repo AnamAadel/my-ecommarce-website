@@ -9,6 +9,8 @@ let totalItems
 export function StateContext({children}) {
 
   const [totalPrice, setTotalPrice] = useState(0);
+  const [trackIndex, setTrackIndex] = useState();
+  const [trackKey, setTrackKey] = useState();
   const {products} = client;
   const router = useRouter();
   const [cartItems , setCartItems] = useState([]);
@@ -20,9 +22,6 @@ export function StateContext({children}) {
   const [filteredItems, setFilteredItems] = useState([]);
 
   let searchArray = [];
-
-  
-
 
   const removeItems = (index)=>{
     
@@ -60,15 +59,16 @@ export function StateContext({children}) {
   manageArrayForSearch()
   
   const handleSearchInput = (value)=>{
-    setSearchIinput(value);
-    if(value.length >= 1){
+    setSearchIinput(value.target.value);
+    if(value.target.value.length >= 1){
         setSuggestions(searchArray.filter((item)=>{
-          return item.toLocaleLowerCase().startsWith(value.toLocaleLowerCase())
+          return item.toLocaleLowerCase().startsWith(value.target.value.toLocaleLowerCase())
         }))
 
     }else{
       setSuggestions([]);
     }
+
 
   }
 
@@ -92,6 +92,46 @@ export function StateContext({children}) {
     handleSearchBx();
 
   }
+
+  const handleArrowKey = (e)=> {
+    setTrackKey(e.key)
+    if(e.key === "ArrowUp" || e.key === "ArrowDown" || suggestions.length == 0){
+      
+      setTrackIndex(0);
+    }
+
+    if(e.key === "ArrowUp"){
+      
+      if(trackIndex > 0){
+        setTrackIndex(trackIndex - 1)
+      }
+     
+    }
+    
+    if(e.key === "ArrowDown"){
+      if(trackIndex < suggestions.length - 1){
+        setTrackIndex(trackIndex + 1)
+        
+      }
+
+    }
+
+    if(e.key === "Enter"){
+      pickInputValue(suggestions[trackIndex]);
+    }
+
+    console.log(trackIndex);
+  }
+
+  
+
+//   useEffect(()=>{
+//     document.addEventListener("keyup",(e)=>{
+//       handleArrowKey(e);
+//     })
+// },[handleArrowKey])
+
+
   return (
     <Context.Provider value={{
       cartItems, 
@@ -110,6 +150,8 @@ export function StateContext({children}) {
       setFilteredItems,
       showFilterItems,
       setShowFilterItems,
+      handleArrowKey,
+      trackIndex,
       searchIinput}} >
         {children}
     </Context.Provider>

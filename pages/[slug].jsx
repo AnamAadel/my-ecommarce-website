@@ -8,18 +8,19 @@ import { useState } from "react"
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineRight } from "react-icons/ai"
 
 
-function SingleShop() {
+function SingleShop({singleProduct, reletedProduct, slug}) {
+    
+
     const {products} = client;
     const router = useRouter();
-    const singleProduct = products.find((product)=> product.id == router.query.slug)
-    const reletedProduct = products.filter((item,index)=>{ return item.catagory.find((name)=> name) ==  singleProduct.catagory.find((name)=> name)})
+    // const singleProduct = products.find((product)=> product.id == router.query.slug)
+    // const reletedProduct = products.filter((item,index)=>{ return item.catagory.find((name)=> name) ==  singleProduct.catagory.find((name)=> name)})
     const [showSemple, setShowSemple] = useState(0);
     const [qty, setQty] = useState(singleProduct.quentity);
     const {addToCart, setTotalQty, totalQty, handleTotalPrice} = useStateContext();
 
      // set increament & decreament
 
-     console.log(reletedProduct)
 
      const incrementAndDecrement = (val)=>{
         if(val == "increament"){
@@ -156,3 +157,33 @@ function SingleShop() {
 }
 
 export default SingleShop
+
+export const getStaticPaths = ()=>{
+    // const router = useRouter();
+    const {products} = client;
+    const paths = products.map((product)=> {
+        return {
+            params: {slug: product.id}
+        }
+    })
+    
+    return {
+        // paths: [{params: {slug: "banner"}}],
+        paths,
+        fallback: 'blocking'
+    }
+}
+export const getStaticProps = (context)=>{
+    const {products} = client;
+    const {slug} = context.params;
+    const singleProduct = products.find((product)=> product.id == slug)
+    const reletedProduct = products.filter((item,index)=>{ return item.catagory.find((name)=> name) ==  singleProduct.catagory.find((name)=> name)})
+
+    // const reletedProduct = products;
+
+    
+
+    return {
+        props: {singleProduct, reletedProduct, slug}
+    }
+}

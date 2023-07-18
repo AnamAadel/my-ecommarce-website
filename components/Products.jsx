@@ -1,4 +1,5 @@
 import { useStateContext } from "@/context/useStateContext";
+import useAuth from "@/hook/useAuth";
 import { client } from "@/lib/client";
 import Link from "next/link";
 import { useState } from "react";
@@ -12,14 +13,14 @@ function Products() {
   const [hideItems, setHideItems] = useState(0);
   
   const [sortItems, setSortItems] = useState();
+
+  const {curUser} = useAuth();
   
   
 
   const {products} = client;
   const {searchItem, setSearchItem, filteredItems, setFilteredItems, showFilterItems, setShowFilterItems} = useStateContext();
   const pageArray = [];
-  
-  console.log(searchItem)
   
   for(let i = 0; i < Math.floor((!showFilterItems? products.length : filteredItems.length) / inputValue) - !showFilterItems && (inputValue == 3? + 1 : - 1); i++){
     searchItem.length < 1 && pageArray.push(i)
@@ -147,7 +148,7 @@ function Products() {
         {/* show product section */}
         <div className="flex flex-wrap w-[90%] justify-start items-center">
         {searchItem.length >= 1 && filteredItems.length < 1 ? searchItem.slice(hideItems ,visibleItems).map((product,index)=>(
-              <Link href={`/${product.id}`}
+              <Link href={`/${curUser? product.id : "MyAcount"}`}
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start group"
                 key={product.id}
               >
@@ -164,7 +165,7 @@ function Products() {
         )) 
         :      
         filteredItems.length < 1 ? products.slice(hideItems ,visibleItems).map((product,index)=>(
-              <Link href={`/${product.id}`}
+              <Link href={`/${curUser? product.id : "MyAcount"}`}
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start group"
                 key={product.id}
               >
@@ -181,7 +182,7 @@ function Products() {
         ))
         :
          filteredItems.slice(hideItems ,visibleItems).map((product,index)=>(
-          <Link href={`/${product.id}`}
+          <Link href={`/${curUser? product.id : "MyAcount"}`}
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start group"
                 key={product.id}
               >

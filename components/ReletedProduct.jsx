@@ -8,7 +8,7 @@ function ReletedProduct({reletedProduct}) {
         </h2>
         <div className="flex flex-wrap w-[90%] items-center">
           {reletedProduct.map((item)=>(
-            <Link href={`/${item.id}`}
+            <Link href={`/${item.id}`} key={item.id}
               className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start"
             >
               <img

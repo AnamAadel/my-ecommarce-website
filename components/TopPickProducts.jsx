@@ -1,7 +1,9 @@
-import Link from "next/link"
+import useAuth from "@/hook/useAuth";
+import Link from "next/link";
 
 function TopPickProducts({products}) {
-  // const {name, image, price} =  topPickProducts
+
+  const {curUser} = useAuth();
 
   const topPickItems = products.filter((item)=> item.topPick)
   
@@ -17,7 +19,7 @@ function TopPickProducts({products}) {
         </header>
         <div className="flex flex-wrap w-[90%] justify-start items-center">
           {topPickItems.map((product,index)=>(
-              <Link href={`/${product.id}`}
+              <Link href={`/${curUser? product.id : "MyAcount"}`}
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start"
                 key={product.id}
               >

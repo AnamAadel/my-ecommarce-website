@@ -1,6 +1,10 @@
-import Link from "next/link"
+import useAuth from "@/hook/useAuth";
+import { client } from "@/lib/client";
+import Link from "next/link";
 
-function HomeBanner({banner}) {
+function HomeBanner() {
+  const {curUser} = useAuth();
+  const {banner} = client;
 const {image, name, btn, id} = banner
   return (
     <>
@@ -12,7 +16,7 @@ const {image, name, btn, id} = banner
         >
           <div className="w-full md:w-1/2 text-center md:text-start">
             <h1 className="text-[4rem] font-medium">{name}</h1>
-            <Link href={`/${id}`}
+            <Link href={`/${curUser? id : "MyAcount"}`}
               type="button"
               className="text-[1.5rem] font-medium underline underline-offset-[1rem] mt-[2.9rem]"
             >
