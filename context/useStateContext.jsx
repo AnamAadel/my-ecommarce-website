@@ -15,7 +15,7 @@ export function StateContext({children}) {
   const router = useRouter();
   const [cartItems , setCartItems] = useState([]);
   const [suggestions , setSuggestions] = useState([]);
-  const [searchIinput, setSearchIinput] = useState();
+  const [searchIinput, setSearchIinput] = useState("");
   const [searchItem, setSearchItem] = useState([]);
   const [showSearchBx, setShowSearchBx] = useState(false);
   const [showFilterItems, setShowFilterItems] = useState(false);
