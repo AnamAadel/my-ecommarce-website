@@ -161,11 +161,12 @@ function Navbar() {
           <span className="block lg:hidden text-[1.5rem] cursor-pointer" onClick={handleMenu}>{showMenu? <AiOutlineClose />  : <AiOutlineMenu />} </span>
           <ul className="flex justify-center gap-[1rem] sm:gap-[2.25rem]">
             <li className='relative cursor-pointer' onClick={handleProfileMenu}>
-              <img
+              {/* <img
                 src={`${userUrl? userUrl : "./assets/mdi_account-alert-outline.svg"}`}
                 alt="user"
                 className="w-[2rem] h-[2rem] rounded-[50%] object-cover"
-              />
+              /> */}
+              <Image src={`${userUrl? userUrl : "assets/mdi_account-alert-outline.svg"}`} width={100} height={100} alt='user image' className="w-[2rem] h-[2rem] rounded-[50%] object-cover" />
               <div className='w-[12rem] shadow-lg p-4 absolute top-[150%] left-[50%] translate-x-[-50%] bg-sweet-yellow rounded-2xl text-center hidden' ref={profileBox} >
                 {userUrl? <Image src={`${userUrl}`} width={100} height={100} alt='user image' className='rounded-[50%] m-auto w-[100px] h-[100px] object-cover' /> : <BiSolidUserCircle className='m-auto text-[5rem] hover:text-slate-400 cursor-pointer' onClick={curUser &&  handleUplodFile} /> }
                 <input type="file" accept="image/*" ref={uplodFile} onChange={handleUplodFile} className="hidden"/>
@@ -180,25 +181,14 @@ function Navbar() {
               </div>
             </li>
             <li onClick={()=> setShowSearchBx(true)} >
-              <img
-                src="./assets/akar-icons_search.svg"
+              <Image src="assets/akar-icons_search.svg"
                 alt="search"
-                className="w-[1.75] h-[1.75] cursor-pointer"
-              />
-            </li>
-            <li>
-              <img
-                src="./assets/akar-icons_heart.svg"
-                alt="heart"
-              />
+                className="w-[1.75rem] h-[1.75rem] cursor-pointer" width={100} height={100} />
             </li>
             <li className='relative' onClick={()=> setShowAddCart(true)}>
-              <img
-                src="./assets/ant-design_shopping-cart-outlined.svg"
+              <Image src="./assets/ant-design_shopping-cart-outlined.svg"
                 alt="shopping cart"
-                className="w-[1.75] h-[1.75] block cursor-pointer"
-                
-              />
+                className="w-[1.75rem] h-[1.75rem] cursor-pointer" width={100} height={100} />
               <span className='absolute px-1 -top-1 inline-block -right-1 bg-red-400 rounded-xl text-white text-[.6rem]' >{totalQty()}</span>
             </li>
           </ul>

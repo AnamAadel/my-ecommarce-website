@@ -1,6 +1,9 @@
-import Link from "next/link"
+import { client } from "@/pages/api/client";
+import Image from "next/image";
+import Link from "next/link";
 
-function OurBlog({blogs}) {
+function OurBlog() {
+  const {blogs} = client
   return (
     <div className="flex flex-col items-center py-[4rem]">
         <header className="text-center m-auto w-[90%]">
@@ -16,10 +19,7 @@ function OurBlog({blogs}) {
         >
         {blogs.map((blog,index)=>(
           <Link href='/blog' key={index} className="w-full md:w-1/4 flex flex-col items-center">
-            <img
-              src={blog.image}
-              alt="square-side-table"
-            />
+            <Image src={blog.image[0]} alt="image" width={255} height={255} className="w-full h-[17.9375rem] object-contain" />
             <p className="text-[1.25rem] mt-[2.6rem]">
               {blog.name}
             </p>
@@ -32,9 +32,9 @@ function OurBlog({blogs}) {
             <p
               className="text-[1rem] font-medium mt-[1rem] flex justify-center gap-[1rem]"
             >
-              <img src="./assets/clock.svg" alt="clock" />
+              <Image src="/assets/clock.svg" alt="clock" width={25} height={25} />
               <span>{blog.minute}</span>
-              <img src="./assets/uil_calender.svg" alt="calender" />
+              <Image src="/assets/uil_calender.svg" alt="calender" width={25} height={25} />
               <span>{blog.date}</span>
             </p>
           </Link>

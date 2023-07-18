@@ -1,7 +1,7 @@
 import AditionalInfo from "@/components/AditionalInfo"
 import ReletedProduct from "@/components/ReletedProduct"
 import { useStateContext } from "@/context/useStateContext"
-import { client } from "@/lib/client"
+import { products } from '@/pages/api/client'
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
@@ -11,7 +11,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiOutlineRight } from "react-icons/ai"
 function SingleShop({singleProduct, reletedProduct, slug}) {
     
 
-    const {products} = client;
+    // const {products} = client;
     const router = useRouter();
     // const singleProduct = products.find((product)=> product.id == router.query.slug)
     // const reletedProduct = products.filter((item,index)=>{ return item.catagory.find((name)=> name) ==  singleProduct.catagory.find((name)=> name)})
@@ -52,7 +52,7 @@ function SingleShop({singleProduct, reletedProduct, slug}) {
                     className="flex flex-row md:flex-col order-2 md:order-1 w-full md:w-[5.2rem] gap-6"
                 >
                     {singleProduct?.image.map((img,index)=>(
-                        <div className="w-full h-[3.5rem] bg-[#FFF9E5] rounded-md p-2 cursor-pointer group" onClick={()=> setShowSemple(index)}>
+                        <div className="w-full h-[3.5rem] bg-[#FFF9E5] rounded-md p-2 cursor-pointer group" onClick={()=> setShowSemple(index)} key={index}>
                         <img
                             src={img}
                             alt="Outdoor bar table and stool"
@@ -160,7 +160,7 @@ export default SingleShop
 
 export const getStaticPaths = ()=>{
     // const router = useRouter();
-    const {products} = client;
+    // const {products} = client;
     const paths = products.map((product)=> {
         return {
             params: {slug: product.id}
@@ -174,7 +174,7 @@ export const getStaticPaths = ()=>{
     }
 }
 export const getStaticProps = (context)=>{
-    const {products} = client;
+    // const {products} = client;
     const {slug} = context.params;
     const singleProduct = products.find((product)=> product.id == slug)
     const reletedProduct = products.filter((item,index)=>{ return item.catagory.find((name)=> name) ==  singleProduct.catagory.find((name)=> name)})

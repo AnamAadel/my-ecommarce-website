@@ -1,4 +1,4 @@
-import { client } from '@/lib/client';
+import { products } from '@/pages/api/client';
 import { useRouter } from 'next/router';
 import { createContext, useContext, useState } from 'react';
 
@@ -11,7 +11,7 @@ export function StateContext({children}) {
   const [totalPrice, setTotalPrice] = useState(0);
   const [trackIndex, setTrackIndex] = useState();
   const [trackKey, setTrackKey] = useState();
-  const {products} = client;
+  // const {products} = client;
   const router = useRouter();
   const [cartItems , setCartItems] = useState([]);
   const [suggestions , setSuggestions] = useState([]);

@@ -84,7 +84,7 @@ function Checkout() {
                     <li className="text-[1rem] font-medium text-gray-400" >
                         <ul className="space-y-2">
                             {cartItems.map((item)=>(
-                                <li className="flex justify-between" >
+                                <li className="flex justify-between" key={item.id} >
                                     <div>{item.name} <span className="text-black">x {item.quentity}</span></div>
                                     <span className="text-black">Rs. {item.price * item.quentity}.00</span>
                                 </li>

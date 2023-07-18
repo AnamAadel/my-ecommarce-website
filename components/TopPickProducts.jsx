@@ -1,7 +1,9 @@
 import useAuth from "@/hook/useAuth";
+import { products } from "@/pages/api/client";
+import Image from "next/image";
 import Link from "next/link";
 
-function TopPickProducts({products}) {
+function TopPickProducts() {
 
   const {curUser} = useAuth();
 
@@ -18,16 +20,11 @@ function TopPickProducts({products}) {
           </p>
         </header>
         <div className="flex flex-wrap w-[90%] justify-start items-center">
-          {topPickItems.map((product,index)=>(
+          {topPickItems.map((product)=>(
               <Link href={`/${curUser? product.id : "MyAcount"}`}
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start"
-                key={product.id}
-              >
-                <img
-                  src={product.image[0]}
-                  alt="square-side-table"
-                  className="w-full h-[17.9375rem] object-contain"
-                />
+                key={product.id} >
+                <Image src={product.image[0]} alt="image" width={255} height={255} className="w-full h-[17.9375rem] object-contain" />
                 <p className="text-[1rem] font-light">{product.name}</p>
                 <p type="button" className="text-[1.5rem] font-medium mt-[1rem]">
                   Rs. {product.price}

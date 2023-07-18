@@ -1,5 +1,7 @@
+import { client } from "@/pages/api/client";
 
-function NewArrivals({newArrivals}) {
+function NewArrivals() {
+  const {newArrivals} = client;
   return (
     <div className="flex justify-center bg-light-pink py-10">
         <div className="flex flex-wrap w-[90%] justify-between items-center">

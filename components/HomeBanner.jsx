@@ -1,5 +1,6 @@
 import useAuth from "@/hook/useAuth";
-import { client } from "@/lib/client";
+import { client } from "@/pages/api/client";
+import Image from "next/image";
 import Link from "next/link";
 
 function HomeBanner() {
@@ -24,10 +25,13 @@ const {image, name, btn, id} = banner
             </Link>
           </div>
           <img
-            src={image[0]}
+            
             className="w-full md:w-[30rem] lg:w-[40rem] lg:h-full"
             alt=""
           />
+          <Image src={image[0]} width={455} height={500} className="w-full md:w-[30rem] lg:w-[40rem] lg:h-full h-auto" priority={true}
+            alt="" />
+          
         </div>
       </div>
     </>

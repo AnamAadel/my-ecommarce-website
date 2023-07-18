@@ -4,13 +4,13 @@ import NewProduct from "@/components/NewProduct";
 import OurBlog from "@/components/OurBlog";
 import TopPickProducts from "@/components/TopPickProducts";
 import useAuth from "@/hook/useAuth";
-import { client } from "@/lib/client";
+import { client, products } from "@/pages/api/client";
 import { useState } from 'react';
 
 
 export default function Home() {
 
-  const {banner, products, newArrivals, blogs} = client;
+  const {banner, newArrivals, blogs} = client;
   const {currentUser} = useAuth();
   const [error, setError] = useState();
   const [loading, setLoading] = useState();
@@ -23,9 +23,9 @@ export default function Home() {
     <>  
           <HomeBanner />
           <NewProduct />
-          <TopPickProducts products={products} />
-          <NewArrivals newArrivals={newArrivals} />
-          <OurBlog blogs={blogs} />
+          <TopPickProducts />
+          <NewArrivals />
+          <OurBlog />
     </>
   )
 }

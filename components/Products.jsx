@@ -1,6 +1,7 @@
 import { useStateContext } from "@/context/useStateContext";
 import useAuth from "@/hook/useAuth";
-import { client } from "@/lib/client";
+import { products } from "@/pages/api/client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -18,7 +19,7 @@ function Products() {
   
   
 
-  const {products} = client;
+  // const {products} = client;
   const {searchItem, setSearchItem, filteredItems, setFilteredItems, showFilterItems, setShowFilterItems} = useStateContext();
   const pageArray = [];
   
@@ -98,10 +99,7 @@ function Products() {
               {/* filter part */}
               <div className="flex gap-3 border-r-2 pr-5 border-gray-500 cursor-pointer">
                 <div className="flex gap-3 relative cursor-pointer group">
-                  <img
-                    src="./assets/system-uicons_filtering.svg"
-                    alt=""
-                  />
+                  <Image src="./assets/system-uicons_filtering.svg" alt="filter icon" width={25} height={25} />
                   <span>Filter</span>
                   <div className="fit-content bg-white text-center text-[1rem] space-y-2 flex-col whitespace-nowrap absolute top-full left-8 border capitalize rounded-md py-4 hidden group-hover:flex">
                     <button className="hover:bg-sweet-yellow px-4 font-medium capitalize" onClick={()=> setShowFilterItems(false)}>default</button>
@@ -112,8 +110,8 @@ function Products() {
                     <button className="hover:bg-sweet-yellow px-4 font-medium capitalize" onClick={()=> handleFilterMenu("almirah")}>almirah</button>
                   </div>
                 </div>
-                <img src="./assets/ci_grid-big-round.svg" alt="" />
-                <img src="./assets/bi_view-list.svg" alt="" />
+                <Image src="assets/ci_grid-big-round.svg" alt="filter icon" width={25} height={25} />
+                <Image src="assets/bi_view-list.svg" alt="filter icon" width={25} height={25} />
               </div>
               {/* show current items amount */}
               <p className="ml-10">Showing 1– {hideItems < (products.length - products.length % 4) ? visibleItems : products.length } of {products.length}  results</p>
@@ -124,7 +122,7 @@ function Products() {
             >
             {/* show certain amount of items */}
               <div className="space-x-4">
-                <label for="show">Show</label>
+                <label htmlFor="show">Show</label>
                 <select id="short" className="h-[3.4375rem] px-4 appearance-none" value={inputValue} onChange={handleVisibleItems}>
                   <option value="3">4</option>
                   <option value="7">8</option>
@@ -134,7 +132,7 @@ function Products() {
               </div>
               {/* short items */}
               <div className="space-x-4">
-                <label for="short">Sort By</label>
+                <label htmlFor="short">Sort By</label>
                 <select id="short" className="h-[3.4375rem] px-4 appearance-none" onClick={handleSortItems} >
                   <option value="true">Default</option>
                   <option value="descending">Price Descending</option>
@@ -152,11 +150,7 @@ function Products() {
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start group"
                 key={product.id}
               >
-                <img
-                  src={product.image[0]}
-                  alt="square-side-table"
-                  className="w-full h-[17.9375rem] object-contain transition-all group-hover:scale-125"
-                />
+                <Image src={product.image[0]} alt="image" width={255} height={255} className="w-full h-[17.9375rem] object-contain transition-all group-hover:scale-125" />
                 <p className="text-[1rem] font-light">{product.name}</p>
                 <p type="button" className="text-[1.5rem] font-medium mt-[1rem]">
                   Rs. {product.price}
@@ -169,11 +163,7 @@ function Products() {
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start group"
                 key={product.id}
               >
-                <img
-                  src={product.image[0]}
-                  alt="square-side-table"
-                  className="w-full h-[17.9375rem] object-contain transition-all group-hover:scale-125"
-                />
+                <Image src={product.image[0]} alt="image" width={255} height={255} className="w-full h-[17.9375rem] object-contain transition-all group-hover:scale-125" />
                 <p className="text-[1rem] font-light">{product.name}</p>
                 <p type="button" className="text-[1.5rem] font-medium mt-[1rem]">
                   Rs. {product.price}
@@ -186,11 +176,7 @@ function Products() {
                 className="w-full sm:w-1/2 md:w-1/4 flex flex-col items-center md:items-start group"
                 key={product.id}
               >
-                <img
-                  src={product.image[0]}
-                  alt="square-side-table"
-                  className="w-full h-[17.9375rem] object-contain transition-all group-hover:scale-125"
-                />
+                <Image src={product.image[0]} alt="image" width={255} height={255} className="w-full h-[17.9375rem] object-contain transition-all group-hover:scale-125" />
                 <p className="text-[1rem] font-light">{product.name}</p>
                 <p type="button" className="text-[1.5rem] font-medium mt-[1rem]">
                   Rs. {product.price}
