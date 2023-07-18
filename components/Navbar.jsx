@@ -161,12 +161,7 @@ function Navbar() {
           <span className="block lg:hidden text-[1.5rem] cursor-pointer" onClick={handleMenu}>{showMenu? <AiOutlineClose />  : <AiOutlineMenu />} </span>
           <ul className="flex justify-center gap-[1rem] sm:gap-[2.25rem]">
             <li className='relative cursor-pointer' onClick={handleProfileMenu}>
-              {/* <img
-                src={`${userUrl? userUrl : "./assets/mdi_account-alert-outline.svg"}`}
-                alt="user"
-                className="w-[2rem] h-[2rem] rounded-[50%] object-cover"
-              /> */}
-              <Image src={`${userUrl? userUrl : "assets/mdi_account-alert-outline.svg"}`} width={100} height={100} alt='user image' className="w-[2rem] h-[2rem] rounded-[50%] object-cover" />
+              {!showProfileMenu? <Image src={`${userUrl? userUrl : "assets/mdi_account-alert-outline.svg"}`} width={100} height={100} alt='user image' className="w-[2rem] h-[2rem] rounded-[50%] object-cover" /> : <AiOutlineClose className='text-[1.5rem]' /> }
               <div className='w-[12rem] shadow-lg p-4 absolute top-[150%] left-[50%] translate-x-[-50%] bg-sweet-yellow rounded-2xl text-center hidden' ref={profileBox} >
                 {userUrl? <Image src={`${userUrl}`} width={100} height={100} alt='user image' className='rounded-[50%] m-auto w-[100px] h-[100px] object-cover' /> : <BiSolidUserCircle className='m-auto text-[5rem] hover:text-slate-400 cursor-pointer' onClick={curUser &&  handleUplodFile} /> }
                 <input type="file" accept="image/*" ref={uplodFile} onChange={handleUplodFile} className="hidden"/>
@@ -198,6 +193,8 @@ function Navbar() {
     {showAddCart && <AddtoCart handleAddCart={handleAddCart} />}
     
     {showSearchBx && <SearchBox handleSearchBx={handleSearchBx} />}
+
+
 
 
     </>

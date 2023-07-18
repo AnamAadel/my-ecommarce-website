@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 function AditionalInfo() {
   return (
     <div className="border-y-2">
@@ -38,18 +38,16 @@ function AditionalInfo() {
                 
                 <div className="w-full md:w-1/2 bg-light-pink p-4">
                   <img
-                    src="./assets/Cloud sofa three seater + ottoman_1 1.png"
-                    alt="square-side-table"
+                    src="/assets/Cloud sofa three seater + ottoman_1 1.png"
+                    alt="square side table"
                     className="w-full h-full object-contain"
                   />
+
+                  <Image src="./assets/Cloud sofa three seater + ottoman_1 1.png" alt="square side table" className="w-full h-full object-contain" width={400} height={400} />
                 </div>
                 
                 <div className="w-full md:w-1/2 bg-light-pink p-4">
-                  <img
-                    src="./assets/Cloud sofa three seater + ottoman_2 1.png"
-                    alt="square-side-table"
-                    className="w-full h-full object-contain"
-                  />
+                  <Image src="/assets/Cloud sofa three seater + ottoman_2 1.png" alt="square side table" className="w-full h-full object-contain" width={400} height={400} />
                 </div>
               </div>
             </div>

@@ -24,11 +24,6 @@ const {image, name, btn, id} = banner
               {btn}
             </Link>
           </div>
-          <img
-            
-            className="w-full md:w-[30rem] lg:w-[40rem] lg:h-full"
-            alt=""
-          />
           <Image src={image[0]} width={455} height={500} className="w-full md:w-[30rem] lg:w-[40rem] lg:h-full h-auto" priority={true}
             alt="" />
           
